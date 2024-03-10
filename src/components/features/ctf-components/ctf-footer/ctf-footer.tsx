@@ -5,6 +5,7 @@ import LinkedIn from '@mui/icons-material/LinkedIn';
 import Twitter from '@mui/icons-material/Twitter';
 import { Theme, Container, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
 import { FooterFieldsFragment } from './__generated/ctf-footer.generated';
@@ -16,7 +17,7 @@ import {
 import { LanguageSelector } from '@src/components/features/language-selector';
 import { Link } from '@src/components/shared/link';
 import { useContentfulContext } from '@src/contentful-context';
-import Logo from '@src/icons/logo-tagline.svg';
+// import Logo from '@src/icons/logo-tagline.svg';
 import { CONTAINER_WIDTH } from '@src/theme';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -305,7 +306,12 @@ export const CtfFooter = (props: FooterFieldsFragment) => {
         <section className={classes.footerCorporate}>
           <div className={classes.corporateLogoMenu}>
             <div className={classes.corporateLogoContainer}>
-              <Logo className={classes.corporateLogo} />
+              <Image
+                src="https://res.cloudinary.com/ziramba/image/upload/v1660035689/ziramba/logos/logo_chtsdb.svg"
+                height={44}
+                width={150}
+              />
+              {/* <Logo className={classes.corporateLogo} /> */}
             </div>
 
             <section className={classes.copyrightAndLegal}>

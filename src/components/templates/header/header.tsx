@@ -7,6 +7,7 @@ import { CtfNavigationGql } from '@src/components/features/ctf-components/ctf-na
 import { Link } from '@src/components/shared/link';
 import Logo from '@src/icons/ziramba-logo.svg';
 import { HEADER_HEIGHT, HEADER_HEIGHT_MD, CONTAINER_WIDTH } from '@src/theme';
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme: Theme) => ({
   appbar: {
@@ -87,7 +88,12 @@ export const Header = (props: HeaderPropsInterface) => {
           }}
         >
           <Link href="/" withoutMaterial title={t('common.homepage')}>
-            <Logo className={classes.corporateLogo} />
+            {/* <Logo className={classes.corporateLogo} /> */}
+            <Image
+              src="https://res.cloudinary.com/ziramba/image/upload/v1660035689/ziramba/logos/logo-dark_kojc4a.svg"
+              height={44}
+              width={150}
+            />
           </Link>
           <Box display={{ xs: 'none', md: 'block' }}>
             <div className={classes.menuWrapper}>

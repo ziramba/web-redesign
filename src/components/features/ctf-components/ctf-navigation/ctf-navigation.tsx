@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme: Theme) => ({
       cursor: 'pointer',
       display: 'inline-block',
       transition: 'transform 0.2s ease-in-out',
+      whiteSpace: 'nowrap',
     },
 
     '&:hover, &:focus, &:focus-within': {
